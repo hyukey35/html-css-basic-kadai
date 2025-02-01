@@ -5,7 +5,7 @@ body{
 }
 
 /* ルート要素のフォント設定 */
-.root {
+p{
   font-size: 20px;
 }
 
@@ -23,31 +23,10 @@ body{
 }
 
   /* 子孫セレクタを使用してbasic内のstrong要素を太字設定 */
-  #basic strong{
-    font-weight: bold;
-  }
-
-  /* 子孫セレクタを使用してp要素内のstorong要素を太字設定*/
-  p strong{
-    font-weight: bold;
-  }
-
-  /* 通常のpのスタイルをリセット */
-  p{
-    font-weight: normal;
-  }
-
-  /* 特定のパラグラフにアンダーライン*/
-  p:last-of-type{
-    position: relative;
-    padding-bottom: 25px;
-  }
+  #parent p{
+      font-weight: bold;
+    }
   
-  p:last-of-type::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0%;
-    width: 100%;
-    border-bottom: 1px solid rgba(178,178,178,0.5); /*下部のアンダーライン設定*/
-    }}
+  /* 通常のpのスタイルをリセット */
+  p{  
+    font-weight: normal; } 
