@@ -1,0 +1,53 @@
+/* 全体のフォント設定 */
+body{
+  font-family: "Arial", "Meiryo", sans-serif;
+  text-align: center; /*中央寄せ*/
+}
+
+/* ルート要素のフォント設定 */
+.root {
+  font-size: 20px;
+}
+
+/* MY PROFILEの色設定 ？？*/
+.blue-text{color: skyblue;}
+.pink-text{color: rgb(255,192,203);}
+
+/* h１のフォント設定 */
+.header{
+  font-family: "Josefin Sans",sans-serif;
+  font-size: 2rem; /*ルート要素の２倍*/
+  letter-spacing : 1.2em;/*文字の大きさに対して1.2倍*/
+  text-shadow:  1px 1px 2px gray;/*影の設定*/
+  border-bottom :3px solid rgb(115,115,114);/*下線の設定*/
+}
+
+  /* 子孫セレクタを使用してbasic内のstrong要素を太字設定 */
+  #basic strong{
+    font-weight: bold;
+  }
+
+  /* 子孫セレクタを使用してp要素内のstorong要素を太字設定*/
+  p strong{
+    font-weight: bold;
+  }
+
+  /* 通常のpのスタイルをリセット */
+  p{
+    font-weight: normal;
+  }
+
+  /* 特定のパラグラフにアンダーライン*/
+  p:last-of-type{
+    position: relative;
+    padding-bottom: 25px;
+  }
+  
+  p:last-of-type::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    width: 100%;
+    border-bottom: 1px solid rgba(178,178,178,0.5); /*下部のアンダーライン設定*/
+    }}
